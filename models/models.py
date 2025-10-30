@@ -118,7 +118,7 @@ class MyKMeans:
             # Random initialization
             idx = np.random.choice(len(X), self.n_clusters, replace=False)
             centers = X[idx]
-            labels = np.zeros(len(X), dtype=int)
+            np.zeros(len(X), dtype=int)
             for _ in range(self.max_iter):
                 distances = np.linalg.norm(X[:, None] - centers, axis=2)
                 labels = np.argmin(distances, axis=1)
